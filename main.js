@@ -1,8 +1,8 @@
 const {app,BrowserWindow,globalShortcut} = require('electron')
 let mainWindow
 let window={
-  width: 800,     //窗口宽度
-  height: 600,    //窗口高度
+  width: 1080,     //窗口宽度
+  height: 1920,    //窗口高度
   frame: false,    //是否显示窗口工具栏
 }
 function createWindow () {
@@ -34,5 +34,8 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+//--icon=appForWindows.ico
 //打包
-//electron-packager . HelloWorld --win --out ./HelloWorldApp --arch=x64 --electron-version=3.0.0
+//electron-packager . appWindows --win --out ./appWindows --arch=x64 --electron-version=3.0.0
+//electron-packager . appLinux --linux --out ./appLinux --arch=x64 --electron-version=3.0.0
